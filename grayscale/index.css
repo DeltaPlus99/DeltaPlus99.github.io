@@ -1,6 +1,11 @@
-html {
-  font-size: 16px;
-  font-family: sans-serif;
+/* 
+comment
+
+*/
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
 }
 
 p {
@@ -12,12 +17,47 @@ h2 {
   margin-bottom: auto;
 }
 
-
 blockquote { 
   font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 6px;
 }
 
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.codeRGB {
+  font-weight: bold;
+}
+
+#color0id {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase
+}
+
+#canvas0 {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #000000;
+}
 
 
+
+
+
+/* 
+comment
+
+  font-family: 'Arial', sans-serif;
+  font-family: 'Verdana', sans-serif;
+  font-family: 'Tahoma', monospace;
+  font-family: 'Helvetica', monospace;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
+
+*/
