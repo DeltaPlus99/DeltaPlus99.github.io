@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Grayscale</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="../array/array.css" rel="stylesheet" type="text/css">
+  <link href="grayscale.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+
+  <br>
+  <div> Colors combine from (<span class="quote">"00","FF"</span>) - 8 colors:
+    <div class="quote">
+      #000000 , #0000FF , #00FF00 , #00FFFF , #FF0000 , #FF00FF , #FFFF00 , #FFFFFF
+    </div>
+    <img src="images/pan-2-00-color.png" alt="pan-2-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","80","FF"</span>) - 27 colors: <br>
+    <div class="quote">
+      #000000 , #000080 , #0000FF , #008000 , #008080 , #0080FF , #00FF00 , #00FF80 , #00FFFF <br>
+      #800000 , #800080 , #8000FF , #808000 , #808080 , #8080FF , #80FF00 , #80FF80 , #80FFFF <br>
+      #FF0000 , #FF0080 , #FF00FF , #FF8000 , #FF8080 , #FF80FF , #FFFF00 , #FFFF80 , #FFFFFF
+    </div>
+    <img src="images/pan-3-00-color.png" alt="pan-3-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","55","AA","FF"</span>) - 64 colors: <br>
+    <img src="images/pan-4-00-color.png" alt="pan-4-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","40","80","C0","FF"</span>) - 125 colors: <br>
+    <img src="images/pan-5-00-color.png" alt="pan-5-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","33","66","99","CC","FF"</span>) - 216 colors: <br>
+    <img src="images/pan-6-00-color.png" alt="pan-6-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","20","40","60","80","A0","C0","E0","FF"</span>) - 729 colors: <br>
+    <img src="images/pan-9-00-color.png" alt="pan-9-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","11","22","33",...,"CC","DD","EE","FF"</span>) - 4,096 colors:
+    <br>
+    <img src="images/pan-g-00-color.png" alt="pan-g-00-color">
+  </div>
+  <br>
+  <div> Colors combine from (<span class="quote">"00","10","20","30",...,"C0","D0","E0","F0","FF"</span>) - 4,913
+    colors:
+    <br>
+    <img src="images/pan-h-00-color.png" alt="pan-h-00-color">
+  </div>
+  <br>
+  <div> All colors from RGB pallet - ‭16,777,216‬ colors: <br>
+    <img src="images/pan-p-00-color.png" alt="pan-p-00-color">
+  </div>
+  <br>
+
+  <hr>
+
+  <h3> Grayscale as luminance in <b>sRGB</b> color space </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/SRGB> https://en.wikipedia.org/wiki/SRGB</a> </div>
+  <div> Formula (see <a href=https://en.wikipedia.org/wiki/Grayscale>https://en.wikipedia.org/wiki/Grayscale</a>):
+  </div>
+  <div> R'G'B' (sRGB,nonlinear) => RGB (linear) => Y (linear) => Y' (sRGB,nonlinear) </div>
+  <div class="wzor"> Y = 0.2126*R+0.7152*G+0.0722*B </div>
+  <div class="wzor" id="wzor1"> </div>
+  <div class="wzor" id="wzor2"> </div>
+  <div> <button onclick="showhide('02')"> show/hide </button> </div>
+  <div id="section02" style="display:block">
+    <img src="images/pan-2-02-srgb.png" alt="pan-2-02-srgb"> <br>
+    <img src="images/pan-3-02-srgb.png" alt="pan-3-02-srgb"> <br>
+    <img src="images/pan-4-02-srgb.png" alt="pan-4-02-srgb"> <br>
+    <img src="images/pan-5-02-srgb.png" alt="pan-5-02-srgb"> <br>
+  </div>
+
+  <h3> Grayscale as luma in Rec. <b>BT.601</b> standard (SDTV) </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/Rec._601>https://en.wikipedia.org/wiki/Rec._601</a> </div>
+  <div> Formula: </div>
+  <div> R'G'B' (BT.601) => Y' (BT.601) </div>
+  <div class="wzor"> Y' = 0.299*R'+0.587*G'+0.114*B' </div>
+  <div> <button onclick="showhide('03')"> show/hide </button> </div>
+  <div id="section03" style="display:none">
+    <img src="images/pan-2-03-bt601.png" alt="pan-2-03-bt601"> <br>
+    <img src="images/pan-3-03-bt601.png" alt="pan-3-03-bt601"> <br>
+    <img src="images/pan-4-03-bt601.png" alt="pan-4-03-bt601"> <br>
+    <img src="images/pan-5-03-bt601.png" alt="pan-5-03-bt601"> <br>
+  </div>
+
+  <h3> Grayscale as luma in Rec. <b>BT.709</b> standard (HDTV) </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/Rec._709>https://en.wikipedia.org/wiki/Rec._709</a> </div>
+  <div> Formula: </div>
+  <div> R'G'B' (BT.709) => Y' (BT.709) </div>
+  <div class="wzor"> Y' = 0.2126*R'+0.7152*G'+0.0722*B' </div>
+  <div> <button onclick="showhide('04')"> show/hide </button> </div>
+  <div id="section04" style="display:none">
+    <img src="images/pan-2-04-bt709.png" alt="pan-2-04-bt709"> <br>
+    <img src="images/pan-3-04-bt709.png" alt="pan-3-04-bt709"> <br>
+    <img src="images/pan-4-04-bt709.png" alt="pan-4-04-bt709"> <br>
+    <img src="images/pan-5-04-bt709.png" alt="pan-5-04-bt709"> <br>
+  </div>
+
+  <h3> Grayscale as luma in Rec. <b>BT.2100</b> standard (UHDTV, HDR) </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/Rec._2100>https://en.wikipedia.org/wiki/Rec._2100</a> </div>
+  <div> Formula: </div>
+  <div> R'G'B' (BT.2100) => Y' (BT.2100) </div>
+  <div class="wzor">Y' = 0.2627*R'+0.6780*G'+0.0593*B' </div>
+  <div> <button onclick="showhide('05')"> show/hide </button> </div>
+  <div id="section05" style="display:none">
+    <img src="images/pan-2-05-bt2100.png" alt="pan-2-05-bt2100"> <br>
+    <img src="images/pan-3-05-bt2100.png" alt="pan-3-05-bt2100"> <br>
+    <img src="images/pan-4-05-bt2100.png" alt="pan-4-05-bt2100"> <br>
+    <img src="images/pan-5-05-bt2100.png" alt="pan-5-05-bt2100"> <br>
+  </div>
+
+  <h3> Grayscale as intensity in <b>HSI</b> model </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/HSL_and_HSV>https://en.wikipedia.org/wiki/HSL_and_HSV</a> </div>
+  <div> Formula: </div>
+  <div> RGB => I (HSI) </div>
+  <div class="wzor">I = avg(R,G,B) = (R+G+B)/3 </div>
+  <div> <button onclick="showhide('06')"> show/hide </button> </div>
+  <div id="section06" style="display:none">
+    <img src="images/pan-2-06-hsi.png" alt="pan-2-06-hsi"> <br>
+    <img src="images/pan-3-06-hsi.png" alt="pan-3-06-hsi"> <br>
+    <img src="images/pan-4-06-hsi.png" alt="pan-4-06-hsi"> <br>
+    <img src="images/pan-5-06-hsi.png" alt="pan-5-06-hsi"> <br>
+  </div>
+
+  <h3> Grayscale as lightness in <b>HSL</b> model </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/HSL_and_HSV>https://en.wikipedia.org/wiki/HSL_and_HSV</a> </div>
+  <div> Formula: </div>
+  <div> RGB => L (HSL) </div>
+  <div class="wzor">L = mid(R,G,B) = (max(R,G,B)+min(R,G,B))/2 </div>
+  <div> <button onclick="showhide('07')"> show/hide </button> </div>
+  <div id="section07" style="display:none">
+    <img src="images/pan-2-07-hsl.png" alt="pan-2-07-hsl"> <br>
+    <img src="images/pan-3-07-hsl.png" alt="pan-3-07-hsl"> <br>
+    <img src="images/pan-4-07-hsl.png" alt="pan-4-07-hsl"> <br>
+    <img src="images/pan-5-07-hsl.png" alt="pan-5-07-hsl"> <br>
+  </div>
+
+  <h3> Grayscale as value in <b>HSV</b> model </h3>
+  <div> <a href=https://en.wikipedia.org/wiki/HSL_and_HSV>https://en.wikipedia.org/wiki/HSL_and_HSV</a> </div>
+  <div> Formula: </div>
+  <div> RGB => V (HSV) </div>
+  <div class="wzor">V = max(R,G,B) </div>
+  <div> <button onclick="showhide('08')"> show/hide </button> </div>
+  <div id="section08" style="display:none">
+    <img src="images/pan-2-08-hsv.png" alt="pan-2-08-hsv"> <br>
+    <img src="images/pan-3-08-hsv.png" alt="pan-3-08-hsv"> <br>
+    <img src="images/pan-4-08-hsv.png" alt="pan-4-08-hsv"> <br>
+    <img src="images/pan-5-08-hsv.png" alt="pan-5-08-hsv"> <br>
+  </div>
+
+  <h3> Grayscale in <b>GIMP</b> graphics program (Luminance mode) </h3>
+  <div> <a href=https://www.gimp.org />https://www.gimp.org/</a> </div>
+  <div> version: 2.10.18, 2020-02-23 </div>
+  <div> option: Colors - Desaturate - Desaturate - Luminance </div>
+  <div> <button onclick="showhide('09')"> show/hide </button> </div>
+  <div id="section09" style="display:none">
+    <img src="images/pan-2-09-gimp-luminance.png" alt="pan-2-09-gimp-luminance"> <br>
+    <img src="images/pan-3-09-gimp-luminance.png" alt="pan-3-09-gimp-luminance"> <br>
+    <img src="images/pan-4-09-gimp-luminance.png" alt="pan-4-09-gimp-luminance"> <br>
+    <img src="images/pan-5-09-gimp-luminance.png" alt="pan-5-09-gimp-luminance"> <br>
+  </div>
+
+  <h3> Grayscale in <b>GIMP</b> graphics program (Luma mode) </h3>
+  <div> <a href=https://www.gimp.org />https://www.gimp.org/</a> </div>
+  <div> version: 2.10.18, 2020-02-23 </div>
+  <div> option: Colors - Desaturate - Desaturate - Luma </div>
+  <div> <button onclick="showhide('10')"> show/hide </button> </div>
+  <div id="section10" style="display:none">
+    <img src="images/pan-2-10-gimp-luma.png" alt="pan-2-10-gimp-luma"> <br>
+    <img src="images/pan-3-10-gimp-luma.png" alt="pan-3-10-gimp-luma"> <br>
+    <img src="images/pan-4-10-gimp-luma.png" alt="pan-4-10-gimp-luma"> <br>
+    <img src="images/pan-5-10-gimp-luma.png" alt="pan-5-10-gimp-luma"> <br>
+  </div>
+
+  <h3> Grayscale in <b>Pixlr</b> photo editing service </h3>
+  <div> <a href=https://pixlr.com />https://pixlr.com/</a> </div>
+  <div> version: Pixlr X and Pixlr E, 2020-03 </div>
+  <div> option: Adjust - Black and white (Pixlr X); Adjustment - Desaturate (Pixlr E) </div>
+  <div> <button onclick="showhide('11')"> show/hide </button> </div>
+  <div id="section11" style="display:none">
+    <img src="images/pan-2-11-pixlr.png" alt="pan-2-11-pixlr"> <br>
+    <img src="images/pan-3-11-pixlr.png" alt="pan-3-11-pixlr"> <br>
+    <img src="images/pan-4-11-pixlr.png" alt="pan-4-11-pixlr"> <br>
+    <img src="images/pan-5-11-pixlr.png" alt="pan-5-11-pixlr"> <br>
+  </div>
+
+  <h3> Grayscale in <b>XnView</b> graphics program </h3>
+  <div> <a href=https://www.xnview.com />https://www.xnview.com/</a> </div>
+  <div> version: 2.49.1, 2019-09-10 (XnView Classic) and 0.95, 2020-01-15 (XnView MP) </div>
+  <div> option: Image - Convert to Grey - 256 Grey scale (XnView Classic);
+    Image - Change color depth... - Greyscale 256 (XnView MP) </div>
+  <div> <button onclick="showhide('12')"> show/hide </button> </div>
+  <div id="section12" style="display:none">
+    <img src="images/pan-2-12-xnview.png" alt="pan-2-12-xnview"> <br>
+    <img src="images/pan-3-12-xnview.png" alt="pan-3-12-xnview"> <br>
+    <img src="images/pan-4-12-xnview.png" alt="pan-4-12-xnview"> <br>
+    <img src="images/pan-5-12-xnview.png" alt="pan-5-12-xnview"> <br>
+  </div>
+
+  <h3> Grayscale in <b>IrfanView</b> graphics program </h3>
+  <div> <a href=https://www.irfanview.com />https://www.irfanview.com/</a> </div>
+  <div> version: 4.54, 2019-12-12 </div>
+  <div> option: Image - Convert to Grayscale </div>
+  <div> <button onclick="showhide('13')"> show/hide </button> </div>
+  <div id="section13" style="display:none">
+    <img src="images/pan-2-13-irfanview.png" alt="pan-2-13-irfanview"> <br>
+    <img src="images/pan-3-13-irfanview.png" alt="pan-3-13-irfanview"> <br>
+    <img src="images/pan-4-13-irfanview.png" alt="pan-4-13-irfanview"> <br>
+    <img src="images/pan-5-13-irfanview.png" alt="pan-5-13-irfanview"> <br>
+  </div>
+
+  <h3> Grayscale in <b>paint.net</b> graphics program </h3>
+  <div> <a href=https://www.getpaint.net />https://www.getpaint.net/</a> </div>
+  <div> version: 4.2.10, 2020-02-13 </div>
+  <div> option: Adjustments - Black and White </div>
+  <div> <button onclick="showhide('14')"> show/hide </button> </div>
+  <div id="section14" style="display:none">
+    <img src="images/pan-2-14-paintnet.png" alt="pan-2-14-paintnet"> <br>
+    <img src="images/pan-3-14-paintnet.png" alt="pan-3-14-paintnet"> <br>
+    <img src="images/pan-4-14-paintnet.png" alt="pan-4-14-paintnet"> <br>
+    <img src="images/pan-5-14-paintnet.png" alt="pan-5-14-paintnet"> <br>
+  </div>
+
+  <hr>
+
+  <h3> Summarize </h3>
+  <div> color and greys: 8 </div>
+  <div> <button onclick="showhide('A2')"> show/hide </button> </div>
+  <div id="sectionA2" style="display:none">
+    <img src="images/pan-2-all.png" alt="pan-2-all">
+  </div>
+  <br>
+  <div> color and greys: 27 </div>
+  <div> <button onclick="showhide('A3')"> show/hide </button> </div>
+  <div id="sectionA3" style="display:block">
+    <img src="images/pan-3-all.png" alt="pan-3-all">
+  </div>
+  <br>
+  <div> color and greys: 64 </div>
+  <div> <button onclick="showhide('A4')"> show/hide </button> </div>
+  <div id="sectionA4" style="display:none">
+    <img src="images/pan-4-all.png" alt="pan-4-all">
+  </div>
+  <br>
+  <div> color and greys: 125 </div>
+  <div> <button onclick="showhide('A5')"> show/hide </button> </div>
+  <div id="sectionA5" style="display:none">
+    <img src="images/pan-5-all.png" alt="pan-5-all">
+  </div>
+
+
+  <hr>
+
+  <div>
+    <span> Input RGB color hex value (<code class="codeRGB">RRGGBB</code>): # </span>
+    <input type="text" id="color0id" onchange="color0f()" value="000000" size=6 pattern="[0-9a-fA-F]{6}$" />
+    <span> or select color: </span>
+    <input type="color" id="color1id" onchange="color1f()" value="#000000" />
+    <div> and show grayscale / get graphics file: </div>
+  </div>
+  <br>
+  <div>
+    <button class="pngButton" onclick="pngDownload(00)">
+      <canvas id="pngCanvas00" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan00></span> - selected color
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(02)">
+      <canvas id="pngCanvas02" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan02></span> - gray as luminance in sRGB
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(03)">
+      <canvas id="pngCanvas03" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan03></span> - gray as luma in BT.601
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(04)">
+      <canvas id="pngCanvas04" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan04></span> - gray as luma in BT.709
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(05)">
+      <canvas id="pngCanvas05" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan05></span> - gray as luma in BT.2100
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(06)">
+      <canvas id="pngCanvas06" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan06></span> - gray as intensity in HSI
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(07)">
+      <canvas id="pngCanvas07" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan07></span> - gray as lightness in HSL
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload(08)">
+      <canvas id="pngCanvas08" width="128" height="64"> </canvas>
+    </button>
+    - #<span id=pngSpan08></span> - gray as value in HSV
+  </div>
+
+
+
+  <hr>
+
+  <div>
+    <span>Input RGBA color hex value (<code class="codeRGBA">RRGGBBAA</code>): #</span>
+    <input type="text" id="color2id" onchange="color2f()" value="00000000" size=8 pattern="[0-9a-fA-F]{8}$" />
+    <!-- <input type="text" id="color2id" value="00000000" size=8 pattern="[0-9a-fA-F]{8}$" /> -->
+    <div>and show / get graphics file:</div>
+  </div>
+  <br>
+  <div>
+    <button class="pngButton" onclick="pngDownload2('AR')">
+      <canvas id="pngCanvasAR" width="128" height="64"> </canvas>
+    </button>
+    - # <span id=pngSpanAR></span> - picture generated by remove (ignore) alpha channel
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload2('FS')">
+      <canvas id="pngCanvasFS" width="128" height="64"></canvas>
+    </button>
+    - # <span id=pngSpanFS></span> - picture generated by canvas fillstyle
+  </div>
+  <div>
+    <button class="pngButton" onclick="pngDownload2('ID')">
+      <canvas id="pngCanvasID" width="128" height="64"> </canvas>
+    </button>
+    - # <span id=pngSpanID></span> - picture generated by canvas putImageData
+  </div>
+
+
+  <hr>
+
+  <div>Select graphics file: <input type="file" id="inputGFile" accept="image/*" onchange="onchangeG(this.files)"></div>
+
+  <div class="divG">
+    <div class="divGFile">
+      <a id="anchorGFile" href="" download="">
+        <img id="imgGFile" src="" onload="onloadG()">
+      </a>
+    </div>
+    <div class="divIB">
+      <div> File info ...<span id="spanGFile"> </span> </div>
+      <div> Image info ...<span id="spanGImage"> </span> </div>
+    </div>
+  </div>
+  
+  <br>
+  <div id="divX"></div>
+  <br>
+  <div id="divT"></div>
+
+
+
+
+  <!-- 
+  <p><canvas id="pngCanvasXX"></canvas>
+    <br><br>
+    <input type="button" id="pngButtonXX" onclick="canvasDownload(canvasXX,'image.png')" value="Get image.png" />
+    - array 'axColors'</p>
+  <br>
+-->
+
+
+
+  <hr>
+
+  <script src="../array/array.js"></script>
+  <script src="grayscale.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+comment
+
+HTMLInputElement.files
+
+document.querySelector("input[type=file]")
+document.querySelector('input')
+document.querySelector("#myfiles")
+
+
+-->

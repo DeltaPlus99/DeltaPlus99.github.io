@@ -1,0 +1,143 @@
+/* 
+comment
+
+*/
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+}
+
+p_ {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+div.wzor {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+
+h3 {
+  margin-bottom: auto;
+}
+
+.quote { 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.codeRGB, .codeRGBA {
+  font-weight: bold;
+}
+
+#color0id, #color2id {
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+#pngCanvas00, #pngCanvas02, #pngCanvas03, #pngCanvas04, #pngCanvas05, #pngCanvas06, #pngCanvas07, #pngCanvas08,
+#pngCanvasAR, #pngCanvasFS, #pngCanvasID {
+  border: 1px solid black;
+  vertical-align: middle;
+}
+#pngSpan00, #pngSpan02, #pngSpan03, #pngSpan04, #pngSpan05, #pngSpan06, #pngSpan07, #pngSpan08,
+#pngSpanAR, #pngSpanFS, #pngSpanID {
+  font-family: monospace;
+  font-size: 22px;
+  font-weight: bold;
+}
+.pngButton {
+  border: none;
+  margin: 1px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+
+.divG {
+  position: relative;
+}
+.divGFile {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  margin: 4px;
+  border: 1px solid;
+  padding: 1px;
+  background-color: #f0f0f0;
+}
+#imgGFile {
+  position: relative;
+  max-width: 64px;
+  max-height: 64px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.divIB {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 4px;
+}
+#anchorGFile {
+  cursor: default;
+}
+
+.imgX {
+  padding: 1px;
+  border: 1px solid;
+  margin: 1px;
+  /* max-width: 100vw; */
+}
+.aX, .aX:visited {
+  color: black;
+}
+
+.divOfColorElement {
+  /* div = insideCell = img + 1 + 19 */
+  /* outsideCell = insideCell + (3,3,3,3) */
+  /* width: 400px; */
+  /* height: 420px; */
+}
+.imgOfColorElement {
+  position: absolute;
+  /* max-width: 400px; */
+  /* max-height: 400px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-10px);
+}
+.imgOfColorName {
+  position: absolute;
+  width: 142px;
+  height: 19px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* 
+comment
+
+  font-family: 'Arial', sans-serif;
+  font-family: 'Verdana', sans-serif;
+  font-family: 'Tahoma', monospace;
+  font-family: 'Helvetica', monospace;
+  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', sans-serif;
+
+
+*/
